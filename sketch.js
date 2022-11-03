@@ -9,7 +9,7 @@ const Composite = Matter.Composite;
 
 let engine;
 let world;
-var rope,rope2,rope3,rope4,fruit,ground;
+var rope,rope2,rope3,fruit,ground;
 var fruit_con;
 var fruit_con_2;
 
@@ -94,10 +94,7 @@ function setup() {
   button3.size(50,50);
   button3.mouseClicked(drop3);
 
-  button4 = createImg('cut_btn.png');
-  button4.position(360,200);
-  button4.size(50,50);
-  button4.mouseClicked(drop4);
+ 
 
   mute_btn = createImg('mute.png');
   mute_btn.position(450,20);
@@ -195,13 +192,7 @@ function drop3()
   fruit_con3 = null; 
 }
 
-function drop4()
-{
-  cut_sound.play();
-  rope4.break();
-  fruit_con4.detach();
-  fruit_con4 = null; 
-}
+
 
 function collide(body,sprite)
 {
